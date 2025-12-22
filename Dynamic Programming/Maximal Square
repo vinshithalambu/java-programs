@@ -1,0 +1,26 @@
+Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
+Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+Output: 4
+Input: matrix = [["0","1"],["1","0"]]
+Output: 1
+
+JAVA CODE
+
+class Solution {
+    public int maximalSquare(char[][] matrix) {
+        int m =matrix.length;
+        int n = matrix[0].length;
+        int mx=0;
+        int[][] dp = new int[m][n];
+         for(int j=0; j<n;j++){
+            if(matrix[0][j]=='1'){
+                dp[0][j] =1;
+            }
+…                    mx = Math.max(mx, dp[i][j]);
+                }
+            }
+         }
+         return mx;
+        
+    }
+}
